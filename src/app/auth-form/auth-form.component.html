@@ -1,0 +1,16 @@
+<div @formTrigger *ngIf="formView">
+  <form  class="form" (ngSubmit) = "onSubmit(form.value)" #form = "ngForm">
+    <h3>{{title}}</h3>
+    <label>
+      Email addsress
+      <input type="email" name="email" #email ngModel>
+    </label>
+    <label>
+      Password
+      <input type="password" name="password" ngModel #password>
+    </label>
+    <button type="submit">
+      {{title}}
+    </button>
+  </form>
+</div>
